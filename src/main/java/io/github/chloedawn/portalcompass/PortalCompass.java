@@ -11,6 +11,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.Set;
 
@@ -43,7 +44,7 @@ public final class PortalCompass {
     }
   }
 
-  static Set<BlockPos> getPositions(final World world) {
+  static @Unmodifiable Set<BlockPos> getPositions(final World world) {
     return ImmutableSet.copyOf(PORTALS.get(world));
   }
 }
