@@ -12,28 +12,31 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerWorld.class)
-@SuppressWarnings("UnresolvedMixinReference")
 abstract class ServerWorldMixin extends World {
   ServerWorldMixin() {
     //noinspection ConstantConditions
     super(null, null, null, null, false);
   }
 
+  @SuppressWarnings("UnresolvedMixinReference")
   @Inject(method = "method_19536", at = @At("HEAD"))
+  // ServerWorld::onBlockChanged->Optional::ifPresent->MinecraftServer::execute
   private void poiRemoved(final BlockPos position, final PointOfInterestType type, final CallbackInfo callback) {
     if (type == PointOfInterestType.NETHER_PORTAL) {
       PortalCompassNetwork.portalRemoved(this, position);
     }
   }
 
+  @SuppressWarnings("UnresolvedMixinReference")
   @Inject(method = "method_19535", at = @At("HEAD"))
+  // ServerWorld::onBlockChanged->Optional::ifPresent->MinecraftServer::execute
   private void poiAdded(final BlockPos position, final PointOfInterestType type, final CallbackInfo callback) {
     if (type == PointOfInterestType.NETHER_PORTAL) {
       PortalCompassNetwork.portalAdded(this, position);
     }
   }
 
-  @Inject(method = { "onPlayerTeleport", "onPlayerChangeDimension", "onPlayerConnected", "onPlayerRespawned" }, at = @At("TAIL"))
+  @Inject(method = {"onPlayerTeleport", "onPlayerChangeDimension", "onPlayerConnected", "onPlayerRespawned"}, at = @At("TAIL"))
   private void playerLevelChanged(final ServerPlayerEntity player, final CallbackInfo callback) {
     PortalCompassNetwork.playerLevelChanged(this, player);
   }
