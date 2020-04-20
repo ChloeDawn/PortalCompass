@@ -2,6 +2,7 @@ package io.github.chloedawn.portalcompass;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.network.ClientSidePacketRegistry;
 import net.fabricmc.fabric.api.network.PacketContext;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -20,6 +21,15 @@ final class PortalCompassClient {
 
   private PortalCompassClient() {
     throw new UnsupportedOperationException();
+  }
+
+  @SuppressWarnings("unused")
+  public static void init() {
+    LOGGER.debug("Registering client packet handlers");
+    final ClientSidePacketRegistry client = ClientSidePacketRegistry.INSTANCE;
+    client.register(PortalCompassNetwork.REMOVE_PORTAL, PortalCompassClient::removePortal);
+    client.register(PortalCompassNetwork.ADD_PORTAL, PortalCompassClient::addPortal);
+    client.register(PortalCompassNetwork.SET_PORTALS, PortalCompassClient::setPortals);
   }
 
   @Environment(EnvType.CLIENT)

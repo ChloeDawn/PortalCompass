@@ -10,10 +10,10 @@
   },
   "entrypoints": {
     "client": [
-      "io.github.chloedawn.portalcompass.PortalCompassNetwork::registerHandlers"
+      "io.github.chloedawn.portalcompass.PortalCompassClient::init"
     ],
     "main": [
-      "io.github.chloedawn.portalcompass.PortalCompass::registerItem"
+      "io.github.chloedawn.portalcompass.PortalCompass::init"
     ]
   },
   "mixins": [

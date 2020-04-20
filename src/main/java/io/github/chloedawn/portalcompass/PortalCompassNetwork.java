@@ -21,21 +21,11 @@ public final class PortalCompassNetwork {
   public static final Identifier ADD_PORTAL = new Identifier(PortalCompass.NAMESPACE, "add_portal");
   public static final Identifier SET_PORTALS = new Identifier(PortalCompass.NAMESPACE, "set_portals");
 
-  private static final ClientSidePacketRegistry CLIENT = ClientSidePacketRegistry.INSTANCE;
   private static final ServerSidePacketRegistry SERVER = ServerSidePacketRegistry.INSTANCE;
   private static final Logger LOGGER = LogManager.getLogger();
 
   private PortalCompassNetwork() {
     throw new UnsupportedOperationException();
-  }
-
-  @SuppressWarnings("unused")
-  @Environment(EnvType.CLIENT)
-  public static void init() {
-    LOGGER.debug("Registering client packet handlers");
-    CLIENT.register(REMOVE_PORTAL, PortalCompassClient::removePortal);
-    CLIENT.register(ADD_PORTAL, PortalCompassClient::addPortal);
-    CLIENT.register(SET_PORTALS, PortalCompassClient::setPortals);
   }
 
   public static void portalRemoved(final World world, final BlockPos position) {
