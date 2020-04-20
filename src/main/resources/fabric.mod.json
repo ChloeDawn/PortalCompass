@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "portalcompass",
+  "name": "Portal Compass",
+  "version": "$version",
+  "description": "A compass for locating the nearest portal structure",
+  "license": "Apache-2.0",
+  "depends": {
+    "fabricloader": "*"
+  },
+  "entrypoints": {
+    "client": [
+      "io.github.chloedawn.portalcompass.PortalCompassNetwork::registerHandlers"
+    ],
+    "main": [
+      "io.github.chloedawn.portalcompass.PortalCompass::registerItem"
+    ]
+  },
+  "mixins": [
+    "mixins/portalcompass/mixins.json"
+  ],
+  "authors": [
+    {
+      "name": "Chloe Dawn",
+      "contact": {
+        "homepage": "https://git.io/Jen3g"
+      }
+    }
+  ]
+}

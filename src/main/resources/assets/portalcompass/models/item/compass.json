@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "portalcompass:item/compass_16"
+  },
+  "overrides": [
+    { "predicate": { "portalcompass:angle": 0.000000 }, "model": "portalcompass:item/compass" },
+    { "predicate": { "portalcompass:angle": 0.015625 }, "model": "portalcompass:item/compass_17" },
+    { "predicate": { "portalcompass:angle": 0.046875 }, "model": "portalcompass:item/compass_18" },
+    { "predicate": { "portalcompass:angle": 0.078125 }, "model": "portalcompass:item/compass_19" },
+    { "predicate": { "portalcompass:angle": 0.109375 }, "model": "portalcompass:item/compass_20" },
+    { "predicate": { "portalcompass:angle": 0.140625 }, "model": "portalcompass:item/compass_21" },
+    { "predicate": { "portalcompass:angle": 0.171875 }, "model": "portalcompass:item/compass_22" },
+    { "predicate": { "portalcompass:angle": 0.203125 }, "model": "portalcompass:item/compass_23" },
+    { "predicate": { "portalcompass:angle": 0.234375 }, "model": "portalcompass:item/compass_24" },
+    { "predicate": { "portalcompass:angle": 0.265625 }, "model": "portalcompass:item/compass_25" },
+    { "predicate": { "portalcompass:angle": 0.296875 }, "model": "portalcompass:item/compass_26" },
+    { "predicate": { "portalcompass:angle": 0.328125 }, "model": "portalcompass:item/compass_27" },
+    { "predicate": { "portalcompass:angle": 0.359375 }, "model": "portalcompass:item/compass_28" },
+    { "predicate": { "portalcompass:angle": 0.390625 }, "model": "portalcompass:item/compass_29" },
+    { "predicate": { "portalcompass:angle": 0.421875 }, "model": "portalcompass:item/compass_30" },
+    { "predicate": { "portalcompass:angle": 0.453125 }, "model": "portalcompass:item/compass_31" },
+    { "predicate": { "portalcompass:angle": 0.484375 }, "model": "portalcompass:item/compass_00" },
+    { "predicate": { "portalcompass:angle": 0.515625 }, "model": "portalcompass:item/compass_01" },
+    { "predicate": { "portalcompass:angle": 0.546875 }, "model": "portalcompass:item/compass_02" },
+    { "predicate": { "portalcompass:angle": 0.578125 }, "model": "portalcompass:item/compass_03" },
+    { "predicate": { "portalcompass:angle": 0.609375 }, "model": "portalcompass:item/compass_04" },
+    { "predicate": { "portalcompass:angle": 0.640625 }, "model": "portalcompass:item/compass_05" },
+    { "predicate": { "portalcompass:angle": 0.671875 }, "model": "portalcompass:item/compass_06" },
+    { "predicate": { "portalcompass:angle": 0.703125 }, "model": "portalcompass:item/compass_07" },
+    { "predicate": { "portalcompass:angle": 0.734375 }, "model": "portalcompass:item/compass_08" },
+    { "predicate": { "portalcompass:angle": 0.765625 }, "model": "portalcompass:item/compass_09" },
+    { "predicate": { "portalcompass:angle": 0.796875 }, "model": "portalcompass:item/compass_10" },
+    { "predicate": { "portalcompass:angle": 0.828125 }, "model": "portalcompass:item/compass_11" },
+    { "predicate": { "portalcompass:angle": 0.859375 }, "model": "portalcompass:item/compass_12" },
+    { "predicate": { "portalcompass:angle": 0.890625 }, "model": "portalcompass:item/compass_13" },
+    { "predicate": { "portalcompass:angle": 0.921875 }, "model": "portalcompass:item/compass_14" },
+    { "predicate": { "portalcompass:angle": 0.953125 }, "model": "portalcompass:item/compass_15" },
+    { "predicate": { "portalcompass:angle": 0.984375 }, "model": "portalcompass:item/compass" }
+  ]
+}
