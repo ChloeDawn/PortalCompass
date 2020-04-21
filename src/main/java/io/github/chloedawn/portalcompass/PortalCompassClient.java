@@ -61,8 +61,9 @@ final class PortalCompassClient {
   }
 
   static void setPortals(final PacketContext context, final PacketByteBuf buf) {
-    final HashSet<BlockPos> portals = new HashSet<>();
-    for (int i = 0; i < buf.readInt(); ++i) {
+    final int size = buf.readInt();
+    final Set<BlockPos> portals = new HashSet<>(size);
+    for (int i = 0; i < size; ++i) {
       portals.add(buf.readBlockPos());
     }
     context.getTaskQueue().execute(() -> setPortals(portals));
